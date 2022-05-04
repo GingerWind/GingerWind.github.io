@@ -16,16 +16,20 @@
   <meta name="author" content="Ginger">
   <meta name="keywords" content="">
   
-    <meta property="og:type" content="article">
+    <meta name="description" content="新建仓库仓库名: {username}.github.io 必须是用户名，否则访问地址就不是二级域名     安装hexo1npm install -g hexo-cli  123hexo init blogcd blognpm install  12hexo ghexo s    测试访问1浏览器访问http:&#x2F;&#x2F;localhost:4000    创建文章修改_config.yml文件 1po">
+<meta property="og:type" content="article">
 <meta property="og:title" content="github+hexo 搭建个人博客">
 <meta property="og:url" content="https://gingerwind.github.io/2022/05/04/github-hexo-%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/index.html">
 <meta property="og:site_name" content="Ginger">
+<meta property="og:description" content="新建仓库仓库名: {username}.github.io 必须是用户名，否则访问地址就不是二级域名     安装hexo1npm install -g hexo-cli  123hexo init blogcd blognpm install  12hexo ghexo s    测试访问1浏览器访问http:&#x2F;&#x2F;localhost:4000    创建文章修改_config.yml文件 1po">
 <meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://gingerwind.github.io/2022/05/04/github-hexo-%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/image-20220504224935815.png">
 <meta property="article:published_time" content="2022-05-04T03:57:31.000Z">
-<meta property="article:modified_time" content="2022-05-04T13:07:23.781Z">
+<meta property="article:modified_time" content="2022-05-04T15:26:49.367Z">
 <meta property="article:author" content="Ginger">
 <meta property="article:tag" content="daily maintenance">
 <meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://gingerwind.github.io/2022/05/04/github-hexo-%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/image-20220504224935815.png">
   
   
   <title>github+hexo 搭建个人博客 - Ginger</title>
@@ -183,7 +187,7 @@
   
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      0 字
+      719 字
     </span>
   
 
@@ -192,7 +196,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      1 分钟
+      6 分钟
     </span>
   
 
@@ -232,7 +236,51 @@
             <h1 style="display: none">github+hexo 搭建个人博客</h1>
             
             <div class="markdown-body">
-              
+              <h5 id="新建仓库"><a href="#新建仓库" class="headerlink" title="新建仓库"></a>新建仓库</h5><p>仓库名: {username}.github.io</p>
+<p>必须是用户名，否则访问地址就不是二级域名</p>
+<img src="/2022/05/04/github-hexo-%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/image-20220504224935815.png" srcset="/img/loading.gif" lazyload class="">
+
+
+
+<h5 id="安装hexo"><a href="#安装hexo" class="headerlink" title="安装hexo"></a>安装hexo</h5><figure class="highlight shell"><table><tr><td class="gutter"><div class="code-wrapper"><pre><span class="line">1</span><br></pre></div></td><td class="code"><pre><code class="hljs shell">npm install -g hexo-cli<br></code></pre></td></tr></table></figure>
+
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs shell">hexo init blog<br>cd blog<br>npm install<br></code></pre></td></tr></table></figure>
+
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs shell">hexo g<br>hexo s<br></code></pre></td></tr></table></figure>
+
+
+
+<h5 id="测试访问"><a href="#测试访问" class="headerlink" title="测试访问"></a>测试访问</h5><figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs awk">浏览器访问http:<span class="hljs-regexp">//</span>localhost:<span class="hljs-number">4000</span><br></code></pre></td></tr></table></figure>
+
+
+
+<h5 id="创建文章"><a href="#创建文章" class="headerlink" title="创建文章"></a>创建文章</h5><p>修改_config.yml文件</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs yaml"><span class="hljs-attr">post_asset_folder:</span> <span class="hljs-literal">true</span><br></code></pre></td></tr></table></figure>
+
+<p>新建文章</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">hexo new post 测试<br></code></pre></td></tr></table></figure>
+
+<p>在source_posts目录下就会有一个测试.md的文件</p>
+<h5 id="发布到GitHub-Pages"><a href="#发布到GitHub-Pages" class="headerlink" title="发布到GitHub Pages"></a>发布到GitHub Pages</h5><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">npm install hexo-deployer-git --save<br></code></pre></td></tr></table></figure>
+
+
+
+<p>修改_config.yml 配置Github相关信息</p>
+<figure class="highlight dts"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs dts"><span class="hljs-symbol">deploy:</span><br><span class="hljs-symbol">  type:</span> git<br><span class="hljs-symbol">  repo:</span> git@github.com:GingerWind/GingerWind.github.io.git<br><span class="hljs-symbol">  branch:</span> main<br><span class="hljs-symbol">  token:</span> ghp_3KakcaPHerunNRyMerofcFd9pblU282FSbsY<br></code></pre></td></tr></table></figure>
+
+<p>部署到GitHub</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">hexo g -d<br></code></pre></td></tr></table></figure>
+
+
+
+<h3 id="注意事项"><a href="#注意事项" class="headerlink" title="注意事项"></a>注意事项</h3><ul>
+<li>hexo 官网主题地址：<a target="_blank" rel="noopener" href="https://hexo.io/themes/">https://hexo.io/themes/</a></li>
+<li>hexo 配置指导手册： <a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/docs/configuration">https://hexo.io/zh-cn/docs/configuration</a></li>
+<li>LeanCloud 配置评论：<a target="_blank" rel="noopener" href="https://console.leancloud.cn/">https://console.leancloud.cn/</a> </li>
+<li>GitHub token 创建：<a target="_blank" rel="noopener" href="https://github.com/settings/tokens">https://github.com/settings/tokens</a></li>
+<li>Mac安装Xcode出现不能安装该软件，因为当前无法从软件更新服务器获得解决方案：<a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/497962061">https://zhuanlan.zhihu.com/p/497962061</a></li>
+</ul>
+
             </div>
             <hr>
             <div>
