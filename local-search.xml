@@ -4,6 +4,31 @@
   
   
   <entry>
+    <title>composer update could&#39;t resolve host flex.symfony.com</title>
+    <link href="/2022/05/08/composer-update-could-t-resolve-host-flex-symfony-com/"/>
+    <url>/2022/05/08/composer-update-could-t-resolve-host-flex-symfony-com/</url>
+    
+    <content type="html"><![CDATA[<img src="/2022/05/08/composer-update-could-t-resolve-host-flex-symfony-com/image-20220507105634663.png" class=""><figure class="highlight shell"><table><tr><td class="gutter"><div class="code-wrapper"><pre><span class="line">1</span><br></pre></div></td><td class="code"><pre><code class="hljs shell">composer config -g repo.packagist composer https://mirrors.aliyun.com/composer/<br></code></pre></td></tr></table></figure><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">composer update<br></code></pre></td></tr></table></figure>]]></content>
+    
+    
+    <categories>
+      
+      <category>问题处理记录</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>resolve</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>github+hexo 搭建个人博客</title>
     <link href="/2022/05/04/github-hexo-%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/"/>
     <url>/2022/05/04/github-hexo-%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/</url>
