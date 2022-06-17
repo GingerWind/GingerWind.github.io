@@ -36,6 +36,12 @@
     <content type="html"><![CDATA[<p>制作源的机器上</p><figure class="highlight shell"><table><tr><td class="gutter"><div class="code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></div></td><td class="code"><pre><code class="hljs shell">apt install dpkg-dev -y<br>mkdir /home/openjdk<br>cd /home/openjdk<br></code></pre></td></tr></table></figure><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">apt-get download $(apt-cache depends --recurse --no-recommends --no-suggests --no-conflicts --no-breaks --no-replaces --no-enhances openjdk-8-jdk | grep -v i386 | grep &quot;^\w&quot; | sort -u)<br></code></pre></td></tr></table></figure><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">dpkg-scanpackages . | gzip -9c &gt; Packages.gz<br></code></pre></td></tr></table></figure><p>需要离线安装的机器上</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">scp -r openjdk xxx@xxx:/tmp/<br></code></pre></td></tr></table></figure><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs shell">mv /etc/apt/sources.list /etc/apt/sources.list.bak<br>cat &lt;&lt; EOF &gt;&gt; /etc/apt/sources.list<br>deb [trusted=yes] file:///tmp/openjdk/ ./<br>EOF<br></code></pre></td></tr></table></figure><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs shell">chown -R _apt:root /tmp/openjdk<br>chmod -R 700 /tmp/openjdk<br></code></pre></td></tr></table></figure><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs shell">apt clean all<br>apt update<br>apt install openjdk-8-jdk<br></code></pre></td></tr></table></figure>]]></content>
     
     
+    <categories>
+      
+      <category>Linux</category>
+      
+    </categories>
+    
     
     <tags>
       
